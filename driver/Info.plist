@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+    <key>CFBundleExecutable</key>
+    <string>InnerLoop</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.itai.virtualaudio.loopback</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+    <key>CFBundleName</key>
+    <string>InnerLoop</string>
+    <key>CFBundlePackageType</key>
+    <string>BNDL</string>
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+    <key>CFBundleVersion</key>
+    <string>1</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
+
+    <!-- Registers our factory function under the AudioServerPlugIn type UUID
+         that coreaudiod scans CFPlugInFactories for. -->
+    <key>CFPlugInFactories</key>
+    <dict>
+        <key>508D873C-0599-47CE-A0E0-4B07A7D8349B</key>
+        <string>InnerLoop_Create</string>
+    </dict>
+    <key>CFPlugInTypes</key>
+    <dict>
+        <key>443ABAB8-E7B3-491A-B985-BEB9187030DB</key>
+        <array>
+            <string>508D873C-0599-47CE-A0E0-4B07A7D8349B</string>
+        </array>
+    </dict>
+</dict>
+</plist>
