@@ -24,6 +24,7 @@ Multi-Output Device that contains it). See `docs/ROUTING.md`.
 ## Repo layout
 
 ```
+Makefile                  forwards targets to driver/Makefile (run make from the root)
 driver/
   Info.plist              plug-in bundle metadata + factory UUID registration
   Makefile                builds/signs/installs the .driver bundle with clang
@@ -47,9 +48,11 @@ and installs into `/Library/Audio/Plug-Ins/HAL`, which loads into
 `coreaudiod`.
 
 ```sh
-cd driver
 make install        # ad-hoc signs, installs, restarts coreaudiod
 ```
+
+Run this from the repo root (it forwards to `driver/Makefile`) or from
+inside `driver/` — both work.
 
 Use a real signing identity for anything beyond local testing:
 
