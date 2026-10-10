@@ -828,7 +828,7 @@ static OSStatus InnerLoop_SetPropertyData(AudioServerPlugInDriverRef inDriver, A
                 // once the HAL calls back into us.
                 UInt64 theToken;
                 memcpy(&theToken, &theNewRate, sizeof(theToken));
-                (*gState.mHost)->RequestDeviceConfigurationChange(gState.mHost, kObjectID_Device, theToken, NULL);
+                gState.mHost->RequestDeviceConfigurationChange(gState.mHost, kObjectID_Device, theToken, NULL);
             }
             else
             {
