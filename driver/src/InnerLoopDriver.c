@@ -16,6 +16,7 @@
 // ../Makefile + ../../scripts for how to build, sign and install it.
 
 #include <CoreAudio/AudioServerPlugIn.h>
+#include <CoreAudio/AudioHardware.h> // BufferFrameSize*, StreamConfiguration selectors
 #include <CoreFoundation/CoreFoundation.h>
 #include <CoreFoundation/CFPlugInCOM.h>
 #include <mach/mach_time.h>
